@@ -1,0 +1,280 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <img src="../images/logo.jpg" />
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.html">Creative Design, Prototyping & Experiential Simulation Lab</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     </div>
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+        Fitts Law
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+
+<!-- Second section of the article-->
+      <section id="experiment-article-section-2">
+        
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+    <!-- Enclose the icon image of your lab.-->
+    <img src="../images/theory.jpg" />
+  </div>
+
+       <!-- The heading for the section can be enclosed in a 
+        div tag.-->
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+          Theory
+        </div> 
+
+
+        <!-- Write the section content inside a paragraph 
+        element, we can also include images with <img> tag-->
+        <div id="experiment-article-section-2-content" 
+        class="divContent">
+          <p><h2>Fitts’s Law - Modeling Target Movement Time in HCI</h2><p><b>Fitts's law</b> is a model of speed-accuracy tradeoffs used in human–computer interaction and ergonomics. It  predicts time required to acquire a target on screen as a function of the distance to the target and the size of the target. Fitts's law is used to model the act of pointing, either by physically touching an object with a hand,finger or virtually  or  by pointing to an object on a computer monitor using a pointing device. It was proposed by Paul Fitts in 1954.</p><p>Mathematically it can be written as</p><p>MT = a + b log 2 ( 2A / W )</p>MT : Movement time (average) taken to complete the movement or point the target<br>a  : Start / Stop time of the device (y intercept)<br>b  : Inherent speed of the device (slope of line)<br>W : Width of the target measured along the axis of motion, which corresponds to accuracy<br>A : Distance from the starting point to the center of the target<br>The term <b>log 2 ( 2A / W )</b>  is called the <b>index of difficulty (ID)</b>. It describes  the  difficulty of the motor tasks.  1/b is  also called the <b>index of performance (IP)</b>and measures the information capacity of the human motor system.</p><p>Thus  MT= a+b ID = (a + ID) / IP</p><img src="../images/theory7.jpg" /><img src="../images/theory8.jpg" /><br><h2>Physical interpretation and application of Fitts’s Law</h2><li>Big targets at close distance are acquired faster than small targets at long range.</li><li>Target  acquiring difficulty increases by one unit for each doubling of  distance  and halving of width  of  target.</li><li>Fitts's Law can be used  to evaluate  alternative interaction methods in Graphical User Interface (GUI).</li><li>It can also be used to predict the performance of operators in user-adaptive systems.</li><h2>Use  of  Fitts’s  Law  to  radial  menus</h2><p>Supposing a designer is confronted with choosing between a linear array type of menu and a round menu in which control buttons are placed radially. Fitts law helps the designer in finding out which would be functionally more efficient and error free given the use context.</p><p>Also the advantage of radial menus can be demonstrated with Fitts’s Law. Since menus pop up at the current cursor position and all items are at  same distance from the centre, they can be approximately reached at the same speed in addition  pointing is enhanced as the radial slices are of  infinite size and thus can be more quickly and reliably selected.</p><img src="../images/theory9.jpg" /><p>It should be noted that while Fitts’s law applies to the physical movement of the pointing devices, other human factors like search-time and decision-time for item selection, must also be taken into account when evaluating the overall performance of menu systems.</p> 
+          </p>
+
+        </div>
+      </section>
+        
+<section id="experiment-article-section-3">
+        
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.--> 
+	  <img src="../images/objective.jpg" />
+	</div>
+     
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+          Objective
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+<p>After performing this experiment</p><ol>1.You will observe the effect of target distance and target size on the GUI target selection time.<br>2.You  can  apply  fitt's law  in designing  and placing widgets on computer interface.<br> 
+          </p> 
+        </div>
+
+      </section>
+
+
+      
+
+
+      <section id="experiment-article-section-4">
+        
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.--> 
+	  <img src="../images/objective.jpg" />
+	</div>
+     
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+          Procedure
+        </div>
+
+        <div id="experiment-article-section-4-content" 
+        class="content">
+<p><ol>1.Be alert. You will see a circle displayed on the screen.<br>2.You will have to click on the circle the very moment it appears.<br>3.Once you click the first circle, another circle with random size, color  and  position will appear on the screen.<br>4.Click on this next circle too the very moment you see it.<br>5.Repeat steps 3 and 4 as long as circles continue to appear.(around 21 circles) <br>6.Finally you will see a table having data of  your selection time, target distances to circle and circle dimensions.<br>7.Observe the graph carefully and  analyse  the  results.<br></ol>   
+          </p> 
+        </div>
+
+      </section>
+      <section id="experiment-article-section-5">
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+          Experiment
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+        class="content">
+          <p><ol>1.Can  you see a circle displayed  on the screen  below?<br>2.Click on this circle the moment you see it.<br>3.Another circle with random size, color and position will appear on the screen.<br>4.Click  on  this next  circle  the  moment  you  see  it.<br>5.Repeat steps 3 and  4  as  long  as  circles  are  displayed.(around  21 circles)<br>6.Finally  you  will  see  the  recorded   data  of   selection  time  ,  target  distances and   circle  dimensions.<br>7.Observe the graph carefully and take a screenshot of the graph and the table and save it on your computer for later use as instructed under assignment tab.<br></ol>
+            <p><embed type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" src="/home/vlabs/hss01/src/lab/04_Fitts Law/simulation/Fitts Law/rework-Fitts.swf" play="true" loop="true" menu="true" height="400" width="800"></p>
+
+          </p>
+        </div>
+
+      </section>
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/quizzes.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+            Quizzes
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+            
+            <p><ol>1.What is the significance of coefficient a and b in the  mathematical expression of fitts’s  law?<br>2.What inference can you  draw  from  the  graph presented at the end of  the experiment?<br>3.Using the interaction data of the experiment try to plot a graph of ID Vs MT and find its  slope.  Is the slope same for different individuals?<br>
+		
+            </p>
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-7">
+	  
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/objective.jpg" />
+	  </div>
+	
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+	    Assignment
+	  </div>
+          <div id="experiment-article-section-7-content" 
+          class="content">
+	    <p><ol>1.Using the screenshot of graph and table saved by you plot a graph with diameter of target along x-axis and corresponding selection time on y-axis. You will see an inverse relationship between the diameter of the target and the selection time.<br>2.Perform the same experiment using a touchpad on a laptop instead of the mouse. Will use of  touchpad on the laptop increase or decrease  the  target  selection  difficulty  or  the  slope  of  the  line?  Compare your results and graphs.<br>3.You  can  repeat  the  same  with  a  touch  screen  if  available. Compare your results and graphs.<br></P>
+	    </div>
+        </section>
+			
+		
+        <section id="experiment-article-section-8">
+   
+          <div id="experiment-article-section-8-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/readings.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-8-heading" 
+          class="heading">
+            Reference
+          </div>
+
+          <div id="experiment-article-section-8-content" 
+          class="content">
+            <ul>	           
+              <li>
+		<a href="http://en.wikipedia.org/wiki/Fitts’s_law">http://en.wikipedia.org/wiki/Fitts’s_law
+		</a>
+              </li>
+		<li>
+		<a href="http://en.wikipedia.org/wiki/Pie_menu">http://en.wikipedia.org/wiki/Pie_menu
+		</a>
+              </li>
+		<li>
+		<a href="http://msdn.microsoft.com/en-us/library/ms993291.aspx">http://msdn.microsoft.com/en-us/library/ms993291.aspx
+		</a>
+              </li>
+		<li>
+		<a href="http://en.wikipedia.org/wiki/Point_and_click">http://en.wikipedia.org/wiki/Point_and_click
+		</a>
+              </li>
+		<li>
+		<a href="http://en.wikipedia.org/wiki/Human-computer_interaction">http://en.wikipedia.org/wiki/Human-computer_interaction
+		</a>
+              </li>
+	   </ul>
+          </div>
+
+        </section>
+
+      </div>
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+</div>		
+
+</body>
+</html>

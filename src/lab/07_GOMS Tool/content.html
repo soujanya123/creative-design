@@ -1,0 +1,460 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <img src="../images/logo.jpg" />
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.html">Creative Design, Prototyping & Experiential Simulation Lab</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     </div>
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+        GOMS Tool
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+        
+
+      <!-- Second section of the article-->
+      <section id="experiment-article-section-2">
+        
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/theory.jpg" />
+	</div>
+
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag.-->
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+          Theory
+        </div> 
+
+
+        <!-- Write the section content inside a paragraph 
+        element, we can also include images with <img> tag-->
+        <div id="experiment-article-section-2-content" 
+        class="divContent">
+<p align="JUSTIFY">
+    <strong>GOMS Model</strong>
+</p>
+<p align="JUSTIFY">
+    <strong>GOMS </strong>
+    <strong>(</strong>
+    <strong>G</strong>oals,<strong> </strong><strong>O</strong>perators,<strong> </strong><strong>M</strong>ethods, and <strong>S</strong>election rules<strong>)</strong>    <strong> </strong>is predictive model of human information processing used for task analysis in human computer interaction design. The model was proposed
+    by Stuart Card, Thomas P. Moran and Allen Newell in 1983. The model is used to analyze user’s physical , cognitive and perceptual interactions with
+    computer while achieving a task or a goal in best possible way.
+</p>
+<p align="JUSTIFY">
+    <strong>Goals</strong>
+    are what users intend to do. <strong>Operators</strong> are actions they perform to achieve their goals. <strong>Methods</strong> are operator sequences
+    that accomplish a goal. Multiple methods can exist to accomplish same goal. <strong>Selection rules</strong> describe when a user will select a method over
+    the other.
+</p>
+<p align="JUSTIFY">
+    In Key Stroke Level (KLM) GOMS model the physical, cognitive and perceptual actions during a task is decomposed in form of fundamental keystroke sequence.
+    The model specifies time required for each fundamental keystroke. Thus we can predict the total time of completing a task. Multiple methods can be compared
+    based on the total time to complete a task in order to determine which is the most efficient method for accomplishing the task is.
+</p>
+<p align="JUSTIFY">
+    Following example of basic GOMS model is taken from <strong>John &amp; Kieras (1996b).</strong> It models the task of moving text in a word processor, in
+    the context of editing a manuscript. Note the use of sub goals and selection rules, which do not exist in KLM.
+</p>
+<pre style="margin-left: 40px;">GOAL: EDIT-MANUSCRIPT
+.     GOAL: EDIT-UNIT-TASK ... repeat until no more unit tasks
+.     .     GOAL: ACQUIRE UNIT-TASK
+.     .     .   GOAL: GET-NEXT-PAGE ... if at end of manuscript page
+.     .     .   GOAL: GET-FROM-MANUSCRIPT
+.     .     GOAL: EXECUTE-UNIT-TASK ... if a unit task was found
+.     .     .   GOAL: MODIFY-TEXT
+.     .     .   .   [select: GOAL: MOVE-TEXT* ...if text is to be moved
+.     .     .   .       GOAL: DELETE-PHRASE ...if a phrase is to be deleted
+.     .     .   .       GOAL: INSERT-WORD] ... if a word is to be inserted
+.     .     .   .     VERIFY-EDIT
+
+*Expansion of MOVE-TEXT goal
+GOAL: MOVE-TEXT
+.     GOAL: CUT-TEXT
+.     .     GOAL: HIGHLIGHT-TEXT
+.     .   . [select**: GOAL: HIGHLIGHT-WORD
+.     .   .      .   MOVE-CURSOR-TO-WORD
+.     .   .      .   DOUBLE-CLICK-MOUSE-BUTTON
+.     .   .      .   VERIFY-HIGHLIGHT
+.     .   .        GOAL: HIGHLIGHT-ARBITRARY-TEXT
+.     .   .      .   MOVE-CURSOR-TO-BEGINNING 1.10
+.     .   .      .   CLICK-MOUSE-BUTTON   0.20
+.     .   .      .   MOVE-CURSOR-TO-END   1.10
+.     .   .      .   SHIFT-CLICK-MOUSE-BUTTON 0.48
+.     .   .      .   VERIFY-HIGHLIGHT]    1.35
+.     .   GOAL: ISSUE-CUT-COMMAND     
+.     .   .     MOVE-CURSOR-TO-EDIT-MENU        1.10
+.     .   .     PRESS-MOUSE-BUTTON        0.10
+.     .   .     MOVE-CURSOR-TO-CUT-ITEM       1.10
+.     .   .     VERIFY-HIGHLIGHT          1.35
+.     .   .     RELEASE-MOUSE-BUTTON        0.10
+.     GOAL: PASTE-TEXT
+.     .     GOAL: POSITION-CURSOR-AT-INSERTION-POINT
+.     .   MOVE-CURSOR-TO-INSERTION-POIONT       1.10
+.     .   CLICK-MOUSE-BUTTON          0.20
+.     .   VERIFY-POSITION           1.35
+.     .   GOAL: ISSUE-PASTE-COMMAND
+.     .   .     MOVE-CURSOR-TO-EDIT-MENU        1.10
+.     .   .     PRESS-MOUSE-BUTTON        0.10
+.     .   .     MOVE-MOUSE-TO-PASTE-ITEM        1.10
+.     .   .     VERIFY-HIGHLIGHT          1.35
+.     .   .     RELEASE-MOUSE-BUTTON        0.10
+          <u><strong>TOTAL TIME PREDICTED (SEC)     14.38</strong></u>
+
+</pre>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Based on the above GOMS analysis, it should take 14.38 seconds to move text.</span></p>
+
+        </div>
+      </section>
+
+
+      <section id="experiment-article-section-3">
+        
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+    <!-- Enclose the icon image of your lab.--> 
+    <img src="../images/objective.jpg" />
+  </div>
+     
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+          Objective
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+<p align="JUSTIFY">
+    <strong>After performing this experiment </strong>
+</p>
+<p align="JUSTIFY">
+    1. You will be able to apply GOMS model for cognitive task analysis and compare user interface designs.
+</p>
+<p align="JUSTIFY">
+    2. You will be able to predict time for performing a task and evaluate user’s performance on a specific user interface (UI).
+</p>
+<p>
+        </div>
+
+      </section>
+      
+
+
+      <section id="experiment-article-section-4">
+        
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+    <!-- Enclose the icon image of your lab.--> 
+    <img src="../images/objective.jpg" />
+  </div>
+     
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+          Procedure
+        </div>
+
+        <div id="experiment-article-section-4-content" 
+        class="content"><p align="JUSTIFY">
+    1. When you click on simulator tab you will see two user interfaces (shown below).
+</p>
+<p align="JUSTIFY">
+    <strong>Interface-1 </strong>
+</p>
+<p align="JUSTIFY">
+    <strong>Interface-2</strong>
+</p>
+<p>
+    <a name="_GoBack"></a>
+    <br/>
+    <br/>
+</p>
+<p align="JUSTIFY">
+    2. Interface-1 has list-boxes and Interface-2 has radio-buttons to input user responses.
+</p>
+<p align="JUSTIFY">
+    3. You are supposed to use interface-1 and interface-2 to rate your understading of few core subjects.
+</p>
+<p align="JUSTIFY">
+    4. Before you start recording your responses on interface-1 press <strong>“Start”</strong> button to start recording of time.
+</p>
+<p align="JUSTIFY">
+    5. Then give your responses for each subject using interface-1 (list boxes).
+</p>
+<p align="JUSTIFY">
+    6. After you finish giving responses for all subjects press <strong>“Stop”</strong> button to stop recording of time.
+</p>
+<p align="JUSTIFY">
+    7. Once again please note: Press "<strong>Start</strong>" and "<strong>Stop</strong>" buttons to record your time.
+</p>
+<p>
+    8. Repeat the same procedure from 4 to 6 for interface-2 ( radio buttons ) .
+</p>
+<p>
+    9. Reset the timer if you wish to repeat the experimentation again.
+</p>
+        </div>
+
+      </section>
+      <section id="experiment-article-section-5">
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+    <!-- Enclose the icon image of your lab.-->
+    <img src="../images/simulation.jpg" />
+  </div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+          Experiment
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+        class="content"><p align="JUSTIFY">
+    1. Can you see two user interfaces below? Interface-1 has list-boxes while interface-2 has radio-buttons.
+</p>
+<p align="JUSTIFY">
+    2. You are supposed to record your reponses using interface-1 and then interface-2.
+</p>
+<p align="JUSTIFY">
+    3. Before you start recording your responses on interface 1 press <strong>“Start”</strong> button to start recording time.
+</p>
+<p align="JUSTIFY">
+    4. Then record your responses for each subject using interface 1 (list-boxes).
+</p>
+<p align="JUSTIFY">
+    5. After you finish giving responses for all subjects press <strong>“Stop”</strong> button to stop recording of time.
+</p>
+<p>
+    6. Repeat the same procedure from 3 to 5 for interface 2 ( radio-buttons ) .
+</p>
+<p>
+    7. Reset the timer if you wish to repeat the experimentation again.
+</p>
+<p>
+    8. After performing the experiment read the <strong>discussion at the end.</strong>
+</p>
+        <p style="text-align: justify;"><span style="font-size: medium; font-family: arial,helvetica,sans-serif;">&nbsp;<embed type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" src="/home/vlabs/hss01/src/lab/07_GOMS Tool/simulation/GOMS Tool/GOMS.swf" play="true" loop="true" menu="true" height="450" width="850"></span></p>
+<p align="JUSTIFY">
+    <strong>Discussion : </strong>
+</p>
+<p align="JUSTIFY">
+    Why is there a difference in the task completion time? Is it because of difference in interaction elements chosen and their layout? <strong> </strong>Is
+    there a cognitive / perceptual factor contributing to task completion time?
+</p>
+<p align="JUSTIFY">
+    An interaction task is always guided by the user goals, interface operators and alternative methods available on interface for acheiving those goals. In
+    this respect the above two interfaces can be analysed using GOMS model. Task analysis using KLM-GOMS model for above interfaces can predict the task
+    completion time before hand. Thus the time and cost for user-testing is reduced.
+</p>
+<p align="JUSTIFY">
+    You are therefore adviced to build a GOMS model for the above task for both interfaces and compare the predictated time with the actual time taken for the
+    task.
+</p>
+        </div>
+      </section>
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+      <!-- Enclose the icon image of your lab.-->
+      <img src="../images/quizzes.jpg" />
+    </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+            Quiz
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+            <p>
+    1. If someone asks you to explain GOMS model how will you go about doing it with examples.
+</p>
+<p>
+    2. How can GOMS model be used to evaluate user interface designs?
+</p>
+<p>
+    3. What are different extensions to GOMS model?
+</p>
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-7">
+    
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+      <!-- Enclose the icon image of your lab.-->
+      <img src="../images/objective.jpg" />
+    </div>
+  
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+      Assignment
+    </div>
+          <div id="experiment-article-section-7-content" 
+          class="content">
+      <p align="JUSTIFY">
+    1. Identify a short word processing task to be accomplished using Microsoft Word. Also identify alternate methods of achieving same task in Word. Draw the
+    GOMS task structure model for both methods and use KLM to predict the task completion times. Compare the two methods on the basis of task completion time.
+    Now redesign the interaction and/or interface and try to reduce the task completion time by effectively utilizing KLM model.
+</p>
+<p align="JUSTIFY">
+    2. As part-B of the above assignment measure the actual time a user needs to accomplish these tasks while working on a computer screen in your lab. Do your
+    measurements tally with your predictions of Part A? If no why not?
+</p>
+<p align="JUSTIFY">
+    3. Consider a drawing task of sketching a square 10cm x 10cm and filling it with blue color. Draw and record time taken to perform this task using any two
+    drawing softwares such as - “Paint”, “Photoshop” etc.Compare the task times between the two softwares. Can you relate this to the GOMS model?
+</p>
+    </div>
+  
+        </section>
+      
+    
+        <section id="experiment-article-section-8">
+   
+          <div id="experiment-article-section-8-icon" 
+          class="icon">
+      <!-- Enclose the icon image of your lab.-->
+      <img src="../images/readings.jpg" />
+    </div>
+
+          <div id="experiment-article-section-8-heading" 
+          class="heading">
+            Reference
+          </div>
+
+          <div id="experiment-article-section-8-content" 
+          class="content">
+            <p>
+    <strong>URLs </strong>
+</p>
+<p>
+    ( as on 26 January 2012 )
+</p>
+<p align="JUSTIFY">
+    http://www.eecs.umich.edu/~kieras/goms.html
+</p>
+<p align="JUSTIFY">
+    http://en.wikipedia.org/wiki/GOMS
+</p>
+<p align="JUSTIFY">
+    http://www.usabilityfirst.com/usability-methods/hci-design-approaches/
+</p>
+<p align="JUSTIFY">
+    http://www.cs.umd.edu/class/fall2002/cmsc838s/tichi/printer/goms.html
+</p>
+<p align="JUSTIFY">
+    http://tip.psychology.org/card.html
+</p>
+<p align="JUSTIFY">
+    http://www.learning-theories.com/goms-model-card-moran-and-newell.html
+</p>
+<p align="JUSTIFY">
+    http://ei.cs.vt.edu/~cs5724/g2/index.html
+</p>
+<p>
+    <strong>Article</strong>
+</p>
+<p align="JUSTIFY">
+    John, B. E., &amp; Kieras, D. E. (1996). <em>Using GOMS for user interface design and evaluation: Which technique?</em> ACM Transactions on Computer-Human
+    Interaction<strong>,</strong> 3, 4, 287-319.
+</p>
+          </div>
+
+        </section>
+
+      </div>
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar --> 
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->            
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+</div>    
+
+</body>
+</html>

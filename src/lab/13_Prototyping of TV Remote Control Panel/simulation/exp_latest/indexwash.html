@@ -1,0 +1,845 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Prototyping of control panel for Washing Machine</title>
+        
+        <!--Stylesheets-->
+        <link rel="StyleSheet" href="css/stylewash.css" type="text/css">
+        <link rel="StyleSheet" href="css/stylelb.css" type="text/css">
+        
+        <!--Scripts-->
+        <script type="text/javascript" src="js/jquery.min.js">
+	</script>
+	
+	<script type="text/javascript" src="js/jquery-ui.js">
+	</script>
+    
+    <script type="text/javascript" src="js/function.js">
+	</script>
+
+        
+        <script>
+	    var freeze = 0;
+	    
+            function changeimg(img)
+            {
+                if(img == 0)
+                   document.getElementById("gridimg").src= "images/nowashing.png";
+                if(img == 1)
+                   document.getElementById("gridimg").src= "images/washing1.png";
+                if(img == 2)
+                   document.getElementById("gridimg").src= "images/washing2.png";
+            }
+            
+                    
+            $(document).ready(function()
+            {
+                //Draggable buttons
+		$("#b1").draggable();
+		$("#b2").draggable();
+		$("#b3").draggable();
+		$("#b4").draggable();
+		$("#b5").draggable();
+		$("#b6").draggable();
+		$("#b7").draggable();
+		$("#b8").draggable();
+		$("#b9").draggable();
+		$("#b10").draggable();
+		$("#b11").draggable();
+		$("#b12").draggable();
+		
+		//Draggable labels
+		$("#l1").draggable();
+		$("#l2").draggable();
+		$("#l3").draggable();
+		$("#l4").draggable();
+		$("#l5").draggable();
+		$("#l6").draggable();
+		$("#l7").draggable();
+		$("#l8").draggable();
+		$("#l9").draggable();
+		$("#l10").draggable();
+		$("#l11").draggable();
+		$("#l12").draggable();
+		$("#l13").draggable();
+		$("#l14").draggable();
+		$("#l15").draggable();
+		$("#l16").draggable();
+		$("#l17").draggable();
+		$("#l18").draggable();
+		$("#l19").draggable();
+		$("#l20").draggable();
+		$("#l21").draggable();
+		$("#l22").draggable();
+		$("#l23").draggable();
+		$("#l24").draggable();
+		$("#l25").draggable();
+		$("#l26").draggable();
+		
+		//Dragable LED's
+		$("#ld1").draggable();
+		$("#ld2").draggable();
+		$("#ld3").draggable();
+		$("#ld4").draggable();
+		$("#ld5").draggable();
+		$("#ld6").draggable();
+		$("#ld7").draggable();
+		$("#ld8").draggable();
+		$("#ld9").draggable();
+		$("#ld10").draggable();
+		$("#ld11").draggable();
+		$("#ld12").draggable();
+		$("#ld13").draggable();
+		$("#ld14").draggable();
+		$("#ld15").draggable();
+		$("#ld16").draggable();
+		$("#ld17").draggable();
+		$("#ld18").draggable();
+		$("#ld19").draggable();
+		$("#ld20").draggable();
+		$("#ld21").draggable();
+		$("#ld22").draggable();
+		$("#ld23").draggable();
+		$("#ld24").draggable();
+		$("#ld25").draggable();
+		$("#ld26").draggable();
+		$("#ld27").draggable();
+		$("#ld28").draggable();
+		$("#ld29").draggable();
+		$("#ld30").draggable();
+		$("#ld31").draggable();
+		$("#ld32").draggable();
+		$("#ld33").draggable();
+		$("#ld34").draggable();
+		$("#ld35").draggable();
+		$("#ld36").draggable();
+		$("#ld37").draggable();
+		$("#ld38").draggable();
+		$("#ld39").draggable();
+		$("#ld40").draggable();
+		
+                $("#av").draggable();
+                $("#mn").draggable();
+                $("#n1").draggable();
+                $("#n2").draggable();
+                $("#n3").draggable();
+                $("#n4").draggable();
+                $("#n5").draggable();
+                $("#n6").draggable();
+                $("#n7").draggable();
+                $("#n8").draggable();
+                $("#n9").draggable();
+                $("#dd").draggable();
+                $("#n10").draggable();
+		$("#n11").draggable();
+		$("#n12").draggable();
+		$("#n13").draggable();
+		$("#n14").draggable();
+                $("#at").draggable();
+                $("#mt").draggable();
+                $("#sc").draggable();
+                $("#pp").draggable();
+                $("#p1").draggable();
+                $("#p2").draggable();
+                $("#v1").draggable();
+                $("#v2").draggable();
+		
+		$("#grid").draggable();
+            });
+	    
+	    function setfreeze()
+	    {
+		if (freeze == 0)
+		{
+		    document.getElementById('disablingDiv').style.display='block';
+		    document.getElementById('disTool').style.display='block';
+		    freeze = 1;
+		}
+		
+		else
+		{
+		    document.getElementById('disablingDiv').style.display='none';
+		    document.getElementById('disTool').style.display='none';
+		    freeze = 0;
+		}
+	    }
+	    
+	    
+
+            function showTask()
+	    {
+		var tdiv = document.getElementById('chk');
+    	    	tdiv.style.display="block";
+      	    }
+
+	    function HideTask()
+	    {
+		var tdiv = document.getElementById('chk');
+        	tdiv.style.display="none";
+      	    }
+
+	    function calculate(frm)
+	    {
+		var tot=0;
+     		var crm="d";
+     		
+		for (var i = 1; i < 41; i++)
+	 	{
+	   	    tcrm=crm+i.toString();
+	   	    if(document.getElementById(tcrm).checked) tot=tot+1;
+	  	}  
+		
+		var mess = tot.toString() + "/40  ";
+		
+		if(tot < 20)
+		{
+		    mess=mess + "(POOR)";
+		}
+		
+		if(tot >= 20 && tot < 28)
+		{
+		    mess=mess + "(FAIR)";
+		}
+		
+		if(tot >= 28 && tot < 36)
+		{
+		    mess=mess + "(GOOD)";
+		}
+		
+		if(tot >= 36)
+		{
+		    mess=mess + "(EXCELLENT)";
+		}
+		
+		document.getElementById('score').innerHTML= "<b><font size='3'>"+mess+"</font></b>";
+	    }
+
+	    
+	    function prpt()
+	    {
+		var r = confirm ("Are you sure you want to clear the panel layout?", "2");
+		
+		if(r == true)
+		{
+		    history.go(0);
+		}
+	    }
+	</script>
+    </head>
+
+    <body>
+        <div class="container">
+	    <div class="operation">
+		<div class="toolbar" id="toolbar">
+		    <div id="disTool"></div>
+		    <div class="buttons">
+			<center><u><b>Buttons</b></u></center>
+			<div class="btnl" id="b1">
+			    <img src="images/white.png" title="" />
+			</div>
+			
+			<div class="btnl" id="b2">
+			    <img src="images/white.png" title="" />
+			</div>
+			
+			<div class="btnl" id="b3">
+			    <img src="images/white.png" title="" />
+			</div>
+			
+			<div class="btnl" id="b4">
+			    <img src="images/white.png" title="" />
+			</div>
+			
+			<div class="btnl" id="b5">
+			    <img src="images/white.png" title="" />
+			</div>
+			
+			<div class="btnl" id="b6">
+			    <img src="images/grey.png" title="" />
+			</div>
+			
+			<div class="btnl" id="b7">
+			    <img src="images/grey.png" title="" />
+			</div>
+			
+			<div class="btnl" id="b8">
+			    <img src="images/grey.png" title="" />
+			</div>
+			
+			<div class="btnl" id="b9">
+			    <img src="images/grey.png" title="" />
+			</div>
+			
+			<div class="btnl" id="b10">
+			    <img src="images/grey.png" title="" />
+			</div>
+	
+			<div class="btnl" id="b11">
+			    <img src="images/pwr.png" title="" />
+			</div>
+			
+			<div class="btnl" id="b12">
+			    <img src="images/strtpse.png" title="" />
+			</div>
+		    </div>
+		    
+		    <div class="labels">
+			<center><u><b>Labels</b></u></center>
+			<div class="imgl" id="l1">
+			    <img src="images/1hr.png" title="" />
+			</div>
+			
+			<div class="imgl" id="l2">
+			    <img src="images/3hr.png" title="" />
+			</div>
+			
+			<div class="imgl" id="l3">
+			    <img src="images/9hr.png" title="" />
+			</div>
+			
+			<div class="imgl" id="l4">
+			    <img src="images/FAST.png" title="" />
+			</div>
+			
+			<div class="imgl" id="l5">
+			    <img src="images/MED.png" title="" />
+			</div>
+			
+			<div class="imgl" id="l6">
+			    <img src="images/SLOW.png" title="" />
+			</div>
+			
+			<div class="imgl" id="l7">
+			    <img src="images/HIGH.png" title="" />
+			</div>
+			
+			<div class="imgl" id="l8">
+			    <img src="images/MED.png" title="" />
+			</div>
+			
+			<div class="imgl" id="l9">
+			    <img src="images/SLOW.png" title="" />
+			</div>
+			
+			<div class="imgl" id="l10">
+			    <img src="images/HOT.png" title="" />
+			</div>
+			
+			<div class="imgl" id="l11">
+			    <img src="images/WARM.png" title="" />
+			</div>
+			
+			<div class="imgl" id="l12">
+			    <img src="images/COLD.png" title="" />
+			</div>
+			
+			<div class="imgl" id="l13">
+			    <img src="images/reg.png" title="" />
+			</div>
+			
+			<div class="imgl" id="l15">
+			    <img src="images/deli.png" title="" />
+			</div>
+			
+			<div class="imgl" id="l16">
+			    <img src="images/wool.png" title="" />
+			</div>
+			
+			<div class="imgl" id="l17">
+			    <img src="images/fav.png" title="" />
+			</div>
+			
+			<div class="imgl" id="l18">
+			    <img src="images/power.png" title="" />
+			</div>
+			
+			<div class="imgl" id="l19">
+			    <img src="images/stp.png" title="" />
+			</div>
+		    </div>
+		    
+		    <div class="leds">
+			<center><u><b>LED's</b></u></center>
+			<div class="led" id="ld1">
+			    <img src="images/green.png" title="Green LED" />
+			</div>
+			
+			<div class="led" id="ld2">
+			    <img src="images/green.png" title="Green LED" />
+			</div>
+			
+			<div class="led" id="ld3">
+			    <img src="images/green.png" title="Green LED" />
+			</div>
+			
+			<div class="led" id="ld4">
+			    <img src="images/green.png" title="Green LED" />
+			</div>
+			
+			<div class="led" id="ld5">
+			    <img src="images/green.png" title="Green LED" />
+			</div>
+			
+			<div class="led" id="ld6">
+			    <img src="images/green.png" title="Green LED" />
+			</div>
+			
+			<div class="led" id="ld7">
+			    <img src="images/green.png" title="Green LED" />
+			</div>
+			
+			<div class="led" id="ld8">
+			    <img src="images/green.png" title="Green LED" />
+			</div>
+			
+			<div class="led" id="ld9">
+			    <img src="images/green.png" title="Green LED" />
+			</div>
+			
+			<div class="led" id="ld10">
+			    <img src="images/green.png" title="Green LED" />
+			</div>
+			
+			<div class="led" id="ld11">
+			    <img src="images/redled.png" title="Red LED" />
+			</div>
+			
+			<div class="led" id="ld12">
+			    <img src="images/redled.png" title="Red LED" />
+			</div>
+			
+			<div class="led" id="ld13">
+			    <img src="images/redled.png" title="Red LED" />
+			</div>
+			
+			<div class="led" id="ld14">
+			    <img src="images/redled.png" title="Red LED" />
+			</div>
+			
+			<div class="led" id="ld15">
+			    <img src="images/redled.png" title="Red LED" />
+			</div>
+			
+			<div class="led" id="ld16">
+			    <img src="images/redled.png" title="Red LED" />
+			</div>
+			
+			<div class="led" id="ld17">
+			    <img src="images/redled.png" title="Red LED" />
+			</div>
+			
+			<div class="led" id="ld18">
+			    <img src="images/redled.png" title="Red LED" />
+			</div>
+			
+			<div class="led" id="ld19">
+			    <img src="images/redled.png" title="Red LED" />
+			</div>
+			
+			<div class="led" id="ld20">
+			    <img src="images/redled.png" title="Red LED" />
+			</div>
+			
+			<div class="led" id="ld21">
+			    <img src="images/orgled.png" title="Orange LED" />
+			</div>
+			
+			<div class="led" id="ld22">
+			    <img src="images/orgled.png" title="Orange LED" />
+			</div>
+			
+			<div class="led" id="ld23">
+			    <img src="images/orgled.png" title="Orange LED" />
+			</div>
+			
+			<div class="led" id="ld24">
+			    <img src="images/orgled.png" title="Orange LED" />
+			</div>
+			
+			<div class="led" id="ld25">
+			    <img src="images/orgled.png" title="Orange LED" />
+			</div>
+			
+			<div class="led" id="ld26">
+			    <img src="images/orgled.png" title="Orange LED" />
+			</div>
+			
+			<div class="led" id="ld27">
+			    <img src="images/orgled.png" title="Orange LED" />
+			</div>
+			
+			<div class="led" id="ld28">
+			    <img src="images/orgled.png" title="Orange LED" />
+			</div>
+			
+			<div class="led" id="ld29">
+			    <img src="images/orgled.png" title="Orange LED" />
+			</div>
+			
+			<div class="led" id="ld30">
+			    <img src="images/orgled.png" title="Orange LED" />
+			</div>
+			
+			<div class="led" id="ld31">
+			    <img src="images/greyled.png" title="Default" />
+			</div>
+			
+			<div class="led" id="ld32">
+			    <img src="images/greyled.png" title="Default" />
+			</div>
+			
+			<div class="led" id="ld33">
+			    <img src="images/greyled.png" title="Default" />
+			</div>
+			
+			<div class="led" id="ld34">
+			    <img src="images/greyled.png" title="Default" />
+			</div>
+			
+			<div class="led" id="ld35">
+			    <img src="images/greyled.png" title="Default" />
+			</div>
+			
+			<div class="led" id="ld36">
+			    <img src="images/greyled.png" title="Default" />
+			</div>
+			
+			<div class="led" id="ld37">
+			    <img src="images/greyled.png" title="Default" />
+			</div>
+			
+			<div class="led" id="ld38">
+			    <img src="images/greyled.png" title="Default" />
+			</div>
+			
+			<div class="led" id="ld39">
+			    <img src="images/greyled.png" title="Default" />
+			</div>
+			
+			<div class="led" id="ld40">
+			    <img src="images/greyled.png" title="Default" />
+			</div>
+		    </div>
+		</div>
+		
+		<div class="workspace">
+		    <div id="disablingDiv">
+			<span style="text-align: right; margin-left: 90%;">Freezed</span>
+		    </div>
+		    
+		    <div style="width: 620px; height: 400px; position: absolute; margin: 0px;">
+			<img src="images/nowashing.png" id="gridimg" />
+            </div>
+		    
+		    <b style="margin-left: 10px; color: black;">Workspace</b>
+		    
+		    <div class="image">
+			<center><img src="images/washing.png" id="grid" width="600px" height="300px" /></center>
+			
+		    </div>
+		</div>
+	    </div>
+		
+	    <div class="action">
+		<p><span style="margin-top: 10px; margin-left: auto; margin-right: auto; width: auto; font-size:18px; text-align: center; color: red;">Washing Machine Control Panel</span></p>
+		
+                <input type="button" name="grid" value="No Grid" accesskey="g0" tabindex="5" onClick='changeimg(0);' style="margin-top: 10px; margin-left: auto; margin-right: auto; width: auto; font-size:14px "/>
+                <input type="button" name="grid1" value="Large Grid" accesskey="g1" tabindex="3" onClick="changeimg(1);" style="margin-top: 10px; margin-left: auto; margin-right: auto; width: auto; font-size:14px "/>
+                <input type="button" name="grid2" value="Small Grid" accesskey="g2" tabindex="4" onClick="changeimg(2);" style="margin-top: 10px; margin-left: auto; margin-right: auto; width: auto; font-size:14px "/>                
+		<input type="button" value="Clear Panel" onClick="prpt()" style="margin-top: 10px; margin-left: auto; margin-right: auto; width: auto; font-size:14px" />
+		<input type="button" name="freeze" id="freeze" value="Freeze / Unfreeze" accesskey="s" tabindex="1" onclick="setfreeze();" style="margin-top: 10px; margin-left: auto; margin-right: auto; width: auto; font-size:14px "/>
+		<input type="button" name="evaluate" id="evaluate" value="Evaluate Design" accesskey="e" tabindex="6" onClick="showTask();" style="margin-top: 10px; margin-left: auto; margin-right: auto; width: auto; font-size:14px " />
+                <input type="button" name="exit" id="exit" value="Exit" onclick="location.href='http://iitg.vlab.co.in/index.php?sub=72&brch=170&sim=1357&cnt=4'" style="margin-top: 10px; margin-left: auto; margin-right: auto; width: auto; font-size:14px "/>
+                
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="thumbnail" href="#" style="text-decoration:underline;color:blue; font-size:15px; ">View sample layout
+	    	    <span><img alt="TV Remote Control" src="Tv_Remote_Control.png" width="200px" height="600px" /></span>
+		</a>
+		        
+        
+<div class="hlp">
+		    <a style="float: right;" href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+		       <img src="images/helpp.png" alt="Help" width="40px" height="40px" />
+		    </a>
+		</div>
+               
+		<div id="light" class="white_content">
+		    <a style="float: right;" href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><img src="images/close.gif" alt="Close" /></a>
+		    <div class="containerlb">
+			<div class="row">
+			    There are three parts of the screen<br />
+			    a)	Function keys (on top)<br />
+			    b)	Movable panel elements (Buttons/labels/LED's)<br />
+			    c)	A fixed panel cut-out (at bottom)<br /><br /><br />
+
+			    1. You can drag any of the movable panel elements and place them wherever you want inside the black border line of the panel cut-out.<br />
+			    2. A reference grid for proper placement of panel elements can be displayed using function keys on the top.<br />
+			    3. Once the entire prototype is ready on the panel cut-out you should freeze the movable elements by clicking FREEZE/UNFREEZE button. You can save this final prototype by using the print-screen key on the keyboard and saving it using paint or other image editing tool.<br />
+			    4. To exit this prototyping experiment press EXIT button on top.<br />
+
+			</div>
+		    </div>
+		</div>
+
+		<div id="fade" class="black_overlay">
+		</div>
+            </div>
+            
+	    <div id="chk" class="checklist">
+                <center><b><u>Design Solution Checklist</u></b></center>
+                <br /><br />
+                Carefully evaluate your design. Check the item below if the statement is TRUE for your solution.<br /><br />
+		Click on "<b>Calculate Design Efficiency</b>" button at the end.
+        	<hr />
+		<br />                      
+        	
+		<b><u>Displays</u></b>
+	        <table width="700" border="1" cellspacing="1" cellpadding="2">
+		    <tr>
+		        <td width="26"><input type="checkbox"  value="1.00" id="d1" /></td>
+			<td width="565">Display elements and labels on panel easily readable to the user </td>
+		    </tr>
+		    
+		    <tr>
+			<td>
+			    <input type="checkbox"  value="1.00"  id="d2" />
+			</td>
+			<td>Panel designed considering vertical and horizontal position of user w.r.t. panel</td>
+		    </tr>
+	          
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d3" /></td>
+			<td>Color and technology of display used matches to ambient light condition</td>
+		    </tr>
+    	      
+		    <tr>
+		        <td><input type="checkbox"  value="1.00" id="d4" /></td>
+			<td>LED positions are highlighted</td>
+		    </tr>
+		</table>
+		
+		<br />
+	        
+		<b><u>Control Elements</u></b>
+		<table width="700" border="1" cellspacing="1" cellpadding="2">
+		    <tr>
+			<td width="26"><input type="checkbox"  value="1.00" id="d5" /></td>
+			<td width="565">Control elements suits the product in general</td>
+		    </tr>
+        	  
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d6" /></td>
+			<td> Labels on control elements are simple to understand</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d7" /></td>
+			<td>Each control panel element has been categorized into input and output</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d8" /></td>
+			<td> Type of information flowing to or from control element has been identified</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d9" /></td>
+			<td>Context and frequency of usage of each control element is known</td>
+		    </tr>
+        	  
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d10" /></td>
+			<td>Available size of panel layout is known</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d11" /></td>
+			<td>Human anthropometric data is known</td>
+		    </tr>
+        	  
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d12" /></td>
+			<td>Sizes of control elements have been designed</td>
+		    </tr>
+        	  
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d13" /></td>
+			<td>Relative positions of grouped control elements have been designed</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d14" /></td>
+			<td>Distances between control elements is designed</td>
+		    </tr>
+		</table>
+		
+		<br />
+    	    
+		<b><u>Ergonomics</u></b>
+        	<table width="700" border="1" cellspacing="1" cellpadding="2">
+		    <tr>
+			<td width="26"><input type="checkbox"  value="1.00" id="d15" /></td>
+			<td width="565">Operational sequence of actions for each atomic task has been documented</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d16" /></td>
+			<td>Control elements have been placed based on operational sequence of actions</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d17" /></td>
+			<td>Controls elements have been grouped based on importance of tasks involved</td>
+		    </tr>
+    	      
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d18" /></td>
+			<td>Controls elements have been grouped based on frequency of usage in tasks</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d20" /></td>
+			<td>Controls elements have been grouped based on related functionality</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d21" /></td>
+			<td>Most frequently used control elements are easily accessible and usable</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d22" /></td>
+			<td>More important or used controls are placed at centre</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d23" /></td>
+			<td>Flow path of hand movements and eye movements for each task is analyzed</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d24" /></td>
+			<td>After designing the wireframe extra cognitive or motor stress is identified</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d25" /></td>
+			<td>Control element and task matrix computed to identify most frequently used controls</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d26" /></td>
+			<td>Environment/ambience of use has been identified</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d27" /></td>
+			<td>User's posture while interacting (seated, standing, moving) has been identified</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d28" /></td>
+			<td>User's viewing angle during interaction has been identified</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d29" /></td>
+			<td>Grouped controls and displays are clearly demarcated (bold lines/colors etc.)</td>
+		    </tr>
+    	      
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d30" /></td>
+			<td>Information on panel is displayed economically and is simple to understand</td>
+		    </tr>
+    	      
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d31" /></td>
+			<td> Visual displays are located in the upper half of the panel</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d32" /></td>
+			<td>Maximum buttons in a row do not exceed four</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d33" /></td>
+			<td>Most frequently used controls are placed on right side</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d34" /></td>
+			<td>Type face, size and color and position of the labels are carefully selected</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d35" /></td>
+			<td>CAPITAL letter forms is avoided</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d36" /></td>
+			<td>Color of graphics is in contrast to color of background</td>
+		    </tr>
+		</table>
+		
+		<br />
+	        
+		<b><u>Aesthetics</u></b>
+		<table width="700" border="1" cellspacing="1" cellpadding="2">
+		    <tr>
+			<td width="26"><input type="checkbox"  value="1.00" id="d37" /></td>
+                	<td width="565">Controls placed based on symmetry, repetition, positive &amp; negative spaces &amp; laws of Gestalts</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d38" /></td>
+			<td>Grid is used to place control elements on panel</td>
+		    </tr>
+		    
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d39" /></td>
+			<td>Sufficient visual space in-between the various elements/groups is provided</td>
+		    </tr>
+		    
+		    <tr>
+        		<td><input type="checkbox"  value="1.00" id="d40" /></td>
+			<td>Panel is visually balanced (placing or distributing controls of various shapes over entire area)</td>
+		    </tr>
+        	
+		    <tr>
+			<td><input type="checkbox"  value="1.00" id="d19" /></td>
+			<td>Name of instrument is carefully placed and is not be conflicting with other elements</td>
+		    </tr>
+        	</table>
+		
+		<table>
+		    <tr>
+			<td>
+			    <INPUT TYPE="Button" value="Calculate Design Efficiency" style=" font-size:16px; cursor: pointer; " onClick="calculate(this.form)">
+			</td>
+			
+			<td>
+			    <b>
+				<font size='4'> : </font>
+			    </b>
+			</td>
+			
+			<td>
+			    <div id="score">
+			    </div>
+			</td> 
+			
+			<td>
+			    <input type="button" style="font-size:16px; cursor:pointer; margin-left: 20px; float: left;" value="Close" onClick="HideTask();"  />
+			</td>
+		    </tr>
+		</table>	
+            	
+		<br />
+	        <hr />
+	    </div>
+	</div>
+    </body>
+</html>
